@@ -19,6 +19,7 @@ const customerRoutes = require('./routes/customers');
 const emergencyRoutes = require('./routes/emergencies');
 const deviceRoutes = require('./routes/devices');
 const staffRoutes = require('./routes/staff');
+const adminRoutes = require('./routes/admin');
 
 validateEnv();
 
@@ -71,6 +72,7 @@ app.use('/api/customers', customerRoutes);
 app.use('/api/emergencies', emergencyRoutes);
 app.use('/api/devices', deviceRoutes);
 app.use('/api/staff', staffRoutes);
+app.use('/api/admin', adminRoutes);
 
 app.get('/api/status', (req, res) => {
   res.json({
